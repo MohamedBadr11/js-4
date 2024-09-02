@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div class="container w-75 my-5 text-center text-white">
+        <div class="form-system text-white w-75 m-auto p-5">
+            <h1>Smart Login System</h1>
+            <div class="name-input">
+                <input oninput="cheekValidation(this)" type="text" class="form-control my-3 bg-transparent text-white" name="signupName"
+                    id="signupName" placeholder="Enter your name">
+            </div>
+            <div class="email-input">
+            <input oninput="cheekValidation(this)" type="" class="form-control my-3 bg-transparent text-white" name="signinemail"
+                    id="signinemail" placeholder="Enter your email">
+            </div>
+            <div class="pas-input">
+                <input oninput="cheekValidation(this)" type="password" class="form-control my-3 bg-transparent text-white" name="signupPassword"
+                    id="signinPassword" placeholder="Enter your password">
+            </div>
+
+            <p id="message" > <!-- error message --> </p>
+
+            <button onclick="userData()" class="btn btn-outline-info my-4 w-100 ">Sign Up</button>
+
+            <p class="text-white">You have an account? <a class="text-white" href="index.html">Signin</a> </p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
