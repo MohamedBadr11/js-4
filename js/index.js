@@ -17,10 +17,11 @@ for (var i = 0; i < pathparts.length - 1; i++) {
 
 var userName = localStorage.getItem('sessionUsername')
 if (userName) {
-    document.getElementById('userName').innerHTML = userName
+    document.getElementById('userName').innerHTML =userName
 }
 
 var users=[]
+
 
 if(localStorage.getItem('inputs')){
     users=JSON.parse(localStorage.getItem('inputs'))
@@ -94,15 +95,14 @@ function isLoginEmpty() {
 function doLogin() {
 
     if (isLoginEmpty()==false) {
-        var box=`<span class"" style="color: red;">all input is required </span> <a href="home.html"></a>`
+        var box=`<span class"" style="color: red;">all input is required </span> `
         message2.innerHTML =box
         return false
     }
 
     var email=signupemail.value
     var password=signupPassword.value
-
-    for (var i = 0; i < users.length; i++) {
+    for (var i = 0; i <users.length ; i++) {
     if (users[i].email.toLowerCase() ==email.toLowerCase()&&users[i].pas.toLowerCase() ==password.toLowerCase()) {
         localStorage.setItem('sessionUsername', users[i].sname)
         if (baseURL == '/') {
@@ -139,4 +139,7 @@ function cheekValidation2(element2) {
         element2.classList.add('is-invalid');
         return false;
     }
+}
+function logout() {
+    localStorage.removeItem('sessionUsername')
 }
